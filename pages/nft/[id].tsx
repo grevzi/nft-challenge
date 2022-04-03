@@ -6,6 +6,7 @@ import {sanityClient, urlFor} from "../../sanity";
 import {Collection} from "../../typings";
 import {toast, Toaster} from "react-hot-toast";
 import {NFTDrop} from "@thirdweb-dev/sdk";
+import Link from 'next/link'
 
 interface Props {
 	collection: Collection
@@ -130,11 +131,13 @@ const NFTDropPage = ({collection}: Props) => {
 
 				<div className="flex flex-1 flex-col p-6 lg:p-12 lg:col-span-6">
 					<header className="flex items-center justify-between">
-						<p className="w-52 cursor-pointer text-xl font-extralight sm:w-80">
-							The <span className="font-extrabold underline decoration-pink-600/50">GREVZI</span> NFT
-							Market
-							Place
-						</p>
+						<Link href={`/`}>
+							<p className="w-52 cursor-pointer text-xl font-extralight sm:w-80">
+								The <span className="font-extrabold underline decoration-pink-600/50">GREVZI</span> NFT
+								Market
+								Place
+							</p>
+						</Link>
 
 						<button
 							onClick={address ? disconnect : connectWithMetamask}
