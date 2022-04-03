@@ -1,4 +1,4 @@
-import type {GetServerSideProps, NextPage} from 'next'
+import type {GetServerSideProps} from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import {useAddress, useDisconnect, useMetamask} from "@thirdweb-dev/react";
